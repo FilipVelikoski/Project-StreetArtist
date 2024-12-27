@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreetArtist</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Ladning Page -->
+    <section id="landingPage" class="page">
+      <!-- Header -->
+      <header>
+        <div class="title">
+          <h3 class="mt-3 mb-3">Street ARTists</h3>
+        </div>
+      </header>
+      <!-- Logo -->
+      <div class="container">
+        <div class="text-center my-5">
+          <img src="./images/logo/Logo.png" alt="" srcset="" />
+        </div>
+      </div>
+      <!--Artist or Visitor -->
+      <div class="container">
+        <div class="wrapper">
+          <div class="joinAsArtist">
+            <div class="artist-wrapper">
+              <div><h4>Join as Artist</h4></div>
+              <select name="artist" class="font-color" id="artistsSelect">
+                <option value="Choose">Choose</option>
+              </select>
+            </div>
+          </div>
+          <div class="joinAsVisitor" id="joinAsVisitor">
+            <div class="visitor-wrapper">
+              <h4>Join as Visitor</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visitor Home Page -->
+    <section id="visitorHomePage" class="page">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="logo-title">
+            <a
+              class="navbar-brand d-flex justify-content-center align-items-center"
+              href="#landingPage"
+            >
+              <img
+                src="./images/logo/76974-[Converted] 1.png"
+                alt=""
+                class="logo"
+              />
+
+              <h3 class="mb-0">Street Artist</h3>
+            </a>
+          </div>
+
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <a href="#landingPage">
+                <span class="navbar-toggler-icon"></span
+              ></a>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Looking for masterpice -->
+      <div class="banner">
+        <div class="wrap">
+          <div class="inner">
+            <h1 class="fw-bold">Looking for masterpice?</h1>
+          </div>
+          <div>
+            <button class="btn-visitor" id="btnVisitor">Find one now!</button>
+          </div>
+        </div>
+      </div>
+      <!-- images -->
+      <div class="container-image mb-5">
+        <div class="image-container left-to-right">
+          <div class="image-wrapper">
+            <img
+              src="./images/visitor/art1.jpg"
+              alt="Image1"
+              class="clickable-image"
+              id="image1"
+            />
+
+            <img
+              src="./images/visitor/art9.jpg"
+              alt="Image2"
+              class="clickable-image"
+              id="image2"
+            />
+
+            <img
+              src="./images/visitor/art3.png"
+              alt="Image3"
+              class="clickable-image"
+              id="imag3"
+            />
+
+            <img
+              src="./images/visitor/art7.jpg"
+              alt="Image3"
+              class="clickable-image"
+              id="imag3"
+            />
+            <img
+              src="./images/visitor/art1.jpg"
+              alt="Image1"
+              class="clickable-image"
+              id="image1"
+            />
+
+            <img
+              src="./images/visitor/art9.jpg"
+              alt="Image2"
+              class="clickable-image"
+              id="image2"
+            />
+
+            <img
+              src="./images/visitor/art3.png"
+              alt="Image3"
+              class="clickable-image"
+              id="imag3"
+            />
+
+            <img
+              src="./images/visitor/art7.jpg"
+              alt="Image3"
+              class="clickable-image"
+              id="imag3"
+            />
+          </div>
+        </div>
+        <div class="image-container right-to-left">
+          <div class="image-wrapper">
+            <img
+              src="./images/visitor/art4.jpg"
+              alt="Image4"
+              class="clickable-image"
+              id="image4"
+            />
+
+            <img
+              src="./images/visitor/art5.jpg"
+              alt="Image5"
+              class="clickable-image"
+              id="image5"
+            />
+
+            <img
+              src="./images/visitor/art6.jpg"
+              alt="Image6"
+              class="clickable-image"
+              id="image6"
+            />
+
+            <img
+              src="./images/visitor/art8.jpg"
+              alt="Image6"
+              class="clickable-image"
+              id="image6"
+            />
+            <img
+              src="./images/visitor/art4.jpg"
+              alt="Image4"
+              class="clickable-image"
+              id="image4"
+            />
+
+            <img
+              src="./images/visitor/art5.jpg"
+              alt="Image5"
+              class="clickable-image"
+              id="image5"
+            />
+
+            <img
+              src="./images/visitor/art6.jpg"
+              alt="Image6"
+              class="clickable-image"
+              id="image6"
+            />
+
+            <img
+              src="./images/visitor/art8.jpg"
+              alt="Image6"
+              class="clickable-image"
+              id="image6"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- carousel -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade mb-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="card-inner">
+                      <img
+                        src="./images/visitor/artist.jpg"
+                        alt="artist1"
+                        class="img-artist"
+                      />
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Inventore, labore!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus, nostrum?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="card-inner">
+                      <img
+                        src="./images/visitor/artist2.jpg"
+                        alt="artist2"
+                        class="img-artist"
+                      />
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Inventore, labore!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus, nostrum?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="card-inner">
+                      <img
+                        src="./images/visitor/artist3.jpg"
+                        alt="artist3"
+                        class="img-artist"
+                      />
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Inventore, labore!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus, nostrum?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card-container">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="card-inner">
+                      <img
+                        src="./images/visitor/artist4.jpg"
+                        alt="artist4"
+                        class="img-artist"
+                      />
+                      <p class="card-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Inventore, labore!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="divider"></div>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text text-center">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Possimus, nostrum?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Visitor Listing -->
+    <section id="visitorListingPage" class="page">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="logo-title">
+            <a
+              class="navbar-brand d-flex justify-content-center align-items-center"
+              href="#landingPage"
+            >
+              <img
+                src="./images/logo/76974-[Converted] 1.png"
+                alt=""
+                class="logo"
+              />
+
+              <h3 class="mb-0">Street Artist</h3>
+            </a>
+          </div>
+
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <a href="#landingPage">
+                <span class="navbar-toggler-icon"></span
+              ></a>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="cards-container"></div>
+      <div class="filterIcon">
+        <img
+          src="./images/filter-icons/filterIcon.svg"
+          alt=""
+          srcset=""
+          id="openFilterPanel"
+        />
+      </div>
+
+      <!-- Filter Panel -->
+      <div id="filterPanel" class="panel">
+        <nav>
+          <div class="nav-wrapper">
+            <div class="logo-title">
+              <a
+                class="navbar-brand d-flex justify-content-center align-items-center"
+                href="#landingPage"
+              >
+                <img
+                  src="./images/logo/76974-[Converted] 1.png"
+                  alt=""
+                  class="logo"
+                />
+
+                <h3 class="mb-0">Street Artist</h3>
+              </a>
+            </div>
+
+            <div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav"></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <button id="closePanelBtn">
+          <img src="./images/filter-icons/Group 19.png" alt="" />
+        </button>
+        <div class="filter-content">
+          <h1>Filter by</h1>
+          <div class="row row-cols-1 row-cols-md-1 g-2">
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <p>By Item Title</p>
+                  <input
+                    type="text"
+                    id="title"
+                    placeholder="Label"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="border-bottomLine"></div>
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">By Artist</p>
+                  <select class="form-select" id="artist"></select>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottomLine"></div>
+
+            <div class="col">
+              <div class="card w-100">
+                <div class="card-body">
+                  <p class="card-title">By Price</p>
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <!-- Min Label and Input -->
+                    <div class="d-flex align-items-center">
+                      <label for="minPrice" class="me-2">Min:</label>
+                      <input
+                        type="text"
+                        id="minPrice"
+                        placeholder="Label"
+                        class="form-control me-2"
+                        style="width: 60%"
+                      />
+                    </div>
+
+                    <!-- Max Label and Input -->
+                    <div class="d-flex align-items-center">
+                      <label for="maxPrice" class="me-2">Max:</label>
+                      <input
+                        type="text"
+                        id="maxPrice"
+                        placeholder="Label"
+                        class="form-control"
+                        style="width: 63%"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottomLine"></div>
+
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">By Type</p>
+                  <select class="form-select" id="type"></select>
+                </div>
+              </div>
+            </div>
+            <div class="border-bottomLine"></div>
+          </div>
+        </div>
+        <button id="applyIconBtn">
+          <img src="./images/filter-icons/Vector 5.svg" alt="" />
+        </button>
+      </div>
+    </section>
+
+    <!-- Artist Home Page -->
+    <section id="artistHomePage" class="page">
+      <nav>
+        <div class="nav-wrapper artist-nav">
+          <div class="logo-title">
+            <a
+              class="navbar-brand d-flex justify-content-center align-items-center"
+              href="#landingPage"
+            >
+              <img
+                src="./images/logo/76974-[Converted] 1.png"
+                alt=""
+                class="logo"
+              />
+
+              <h3 class="artist-name mb-0"></h3>
+            </a>
+          </div>
+
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#landingPage">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#artistItemsPage">Items</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#landingPage">Auction</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="artistHomePageContainer">
+        <div class="container-lg">
+          <div class="row row-cols-2 row-cols-md-2 g-4">
+            <div class="col mt-5 mb-3">
+              <div class="card w-100 text-center">
+                <div class="card-body">
+                  <p class="card-title mb-0">Total Items Sold</p>
+                  <p class="card-text mb-0" id="itemSold"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col mt-5 mb-3">
+              <div class="card w-100 text-center">
+                <div class="card-body">
+                  <p class="card-title mb-0">Total Income</p>
+                  <p class="card-text mb-0" id="totalIncome"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="auction-card">
+            <div class="card w-100">
+              <div class="card-body text-center mb-4">
+                <h5 class="card-title mb-0">Live Auctioning Item</h5>
+                <p class="card-text mb-0" id="auctionContainer"></p>
+                <p class="mb-0">current bid</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-lg">
+        <div class="charts">
+          <p class="mt-3">Display my income for last</p>
+          <div class="inner">
+            <button id="last7">7 days</button>
+            <button id="last14" class="active">14 days</button>
+            <button id="last30">30 days</button>
+          </div>
+
+          <canvas id="myChart" width="778" height="700"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artist Items Page -->
+    <section id="artistItemsPage" class="page">
+      <nav>
+        <div class="nav-wrapper artist-nav">
+          <div class="logo-title">
+            <a
+              class="navbar-brand d-flex justify-content-center align-items-center"
+              href="#landingPage"
+            >
+              <img
+                src="./images/logo/76974-[Converted] 1.png"
+                alt=""
+                class="logo"
+              />
+
+              <h3 class="artistadd-name mb-0"></h3>
+            </a>
+          </div>
+
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#artistHomePage">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#artistItemsPage">Items</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#landingPage">Auction</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="col add-new-item my-3 mb-0">
+        <div class="card w-100 p-3">
+          <div class="card-body mx-3 p-4" id="openAddNewItem">
+            <p class="card-text text-center">+ Add new item</p>
+          </div>
+        </div>
+      </div>
+      <div id="addNewItemPanel" class="addPanel">
+        <nav>
+          <div class="nav-wrapper artist-nav">
+            <div class="logo-title">
+              <a
+                class="navbar-brand d-flex justify-content-center align-items-center"
+                href="#landingPage"
+              >
+                <img
+                  src="./images/logo/76974-[Converted] 1.png"
+                  alt=""
+                  class="logo"
+                />
+
+                <h3 class="artistaddnew-name mb-0"></h3>
+              </a>
+            </div>
+
+            <div>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#artistHomePage">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#artistItemsPage">Items</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#auctionPage">Auction</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="addItemContent">
+          <div class="row row-cols-1 row-cols-md-1 g-0">
+            <div class="col">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="d-flex align-items-center">
+                      <h1 class="add-edit-title">Add New Item</h1>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <label for="addPublished"
+                        >Is published:
+                        <input type="checkbox" id="addPublished" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card w-100">
+                <div class="card-body">
+                  <p class="mb-0">Title</p>
+                  <input type="text" id="addTitle" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card w-100">
+                <div class="card-body">
+                  <p class="mb-0">Description</p>
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Leave a comment here"
+                      id="addDescription"
+                      style="height: 100px"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card w-100">
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div class="mb-3">
+                      <label for="addType" class="form-label">Type</label>
+                      <select
+                        class="form-select"
+                        style="width: 150px"
+                        id="addType"
+                      ></select>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="addPrice" class="form-label">Price</label>
+                      <input type="number" id="addPrice" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="card w-100">
+                <div class="card-body">
+                  <p class="mb-0">Image URL</p>
+                  <input type="text" id="addImage" class="form-control" />
+                </div>
+              </div>
+            </div>
+            <p class="text-center mb-0 mt-3">or</p>
+            <div class="col snap-shot">
+              <div class="card w-100 p-3">
+                <div class="card-body mx-3 p-4">
+                  <a href="#captureImagePage" class="take-snapshot"
+                    ><img
+                      src="./images/snapshot/Vector.png"
+                      id="displayCaptureImage"
+                      class="mb-2"
+                      alt=""
+                    />
+                    <p class="card-text text-center take-snapshot">
+                      Take a snapshot
+                    </p></a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col d-flex justify-content-between">
+              <button type="submit" id="addNewItemBtn" style="width: 170px">
+                Add new item
+              </button>
+              <button type="submit" class="saveEditBtn d-none font-weight-bold">
+                Save Changes
+              </button>
+              <button id="closeBtn" style="width: 170px">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="artistItems-cards"></div>
+      <div class="modal" tabindex="-1" id="removeConfirmation">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>Are you sure you want to remove this item?</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="confirmRemoveBtn"
+              >
+                Confirm
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capture Image Page -->
+    <section id="captureImagePage" class="page">
+      <nav>
+        <div class="nav-wrapper artist-nav">
+          <div class="logo-title">
+            <a
+              class="navbar-brand d-flex justify-content-center align-items-center"
+              href="#landingPage"
+            >
+              <img
+                src="./images/logo/76974-[Converted] 1.png"
+                alt=""
+                class="logo"
+              />
+
+              <h3 class="artistCaptureImage-name mb-0"></h3>
+            </a>
+          </div>
+
+          <div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#artistHomePage">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#artistItemsPage">Items</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#landingPage">Auction</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="captureImage-inner">
+        <video id="liveStream" class="camera" autoplay></video>
+        <button id="captureSnapshot" class="captureBtn">
+          <img src="./images/snapshot/Vector.png" alt="" />
+        </button>
+        <canvas style="display: none" id="snapshotCanvas"></canvas>
+        <img id="imageToDisplay" />
+      </div>
+    </section>
+
+    <!-- bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
