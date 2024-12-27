@@ -1,3 +1,10 @@
+import { items } from "../../../data/db.js";
+import { itemTypes } from "../../../data/db.js";
+import { formatDate } from "../../utils/dates.js";
+import { getArtist } from "../../utils/global.js";
+
+let localItems = [...items];
+
 // Select Elements
 const artistItemsCards = document.querySelector("#artistItems-cards");
 const addPublished = document.querySelector("#addPublished");
