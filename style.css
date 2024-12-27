@@ -1,0 +1,827 @@
+body {
+  background-color: #fcebd5;
+  margin: 0;
+}
+
+.page {
+  display: none;
+}
+
+/* Header */
+h3 {
+  color: #a16a5e;
+}
+
+h3,
+h4 {
+  font-family: Reenie Beanie;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.title {
+  border-bottom: 2px solid #c1b4a3;
+  box-shadow: 0 2px 5px rgba(206, 200, 200, 0.1);
+}
+
+/* Landing Page */
+/* Join as artist */
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper {
+  position: relative;
+  height: 362.5px;
+  width: 240px;
+  box-shadow: 4px 1px 5px 3px rgba(50, 50, 50, 0.3);
+  z-index: 9999;
+}
+.artist-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 95px;
+}
+
+.joinAsArtist {
+  background-color: #edd5bb;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 42%);
+  position: absolute;
+  height: 256.5px;
+  width: 240px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.joinAsArtist:hover {
+  transform: scale(1.1);
+}
+
+.joinAsArtist h4 {
+  color: #a16a5e;
+  font-size: 40px;
+}
+
+#artistsSelect {
+  width: 40%;
+  background-color: transparent;
+  padding: 4px;
+  border: 1px solid #a16a5e;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 85px;
+}
+
+.font-color {
+  color: #a16a5e;
+}
+
+/* Join As Visitor */
+.joinAsVisitor {
+  position: absolute;
+  bottom: 0;
+}
+
+.visitor-wrapper {
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 58%, 100% 100%, 0 100%);
+  background-color: #a16a5e;
+  position: absolute;
+  height: 256.5px;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  color: #fcebd5;
+  transition: all 0.3s ease;
+}
+
+.visitor-wrapper h4 {
+  margin-top: 90px;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.visitor-wrapper:hover {
+  transform: scale(1.1);
+}
+
+/* Visitor Home Page */
+.nav-wrapper {
+  height: 69px;
+  background-color: #fcebd5;
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  z-index: 11;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-top: 1.5rem;
+  width: 95px;
+  height: 100px;
+}
+.navbar-toggler-icon {
+  background-image: url(./images/auction/ri_auction-fill.png);
+  font-size: 25px;
+  margin: 10px;
+}
+
+.navbar {
+  --bs-navbar-toggler-border-color: none;
+}
+
+/* looking for masterpice */
+.banner {
+  height: 20vh;
+  background: url(./images/visitor/Bricks.png);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-position: center;
+  background-size: cover;
+}
+
+.banner .wrap {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner .inner {
+  max-width: 50%;
+  max-height: 50%;
+  font-size: 15px;
+  color: #a16a5e;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-visitor {
+  border: 1px solid #a16a5e;
+  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-radius: 5px;
+  background-color: #a16a5e;
+  color: white;
+}
+
+.container-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #edd5bb;
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 20px 0;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  display: flex;
+  width: calc(200%);
+  align-items: center;
+}
+
+.image-wrapper img {
+  flex: 1;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 10px;
+}
+
+.left-to-right .image-wrapper {
+  animation: move-left-to-right 40s linear infinite;
+}
+
+.right-to-left .image-wrapper {
+  animation: move-right-to-left 40s linear infinite;
+}
+
+@keyframes move-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* carousel */
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 73%;
+  height: 250px;
+}
+
+@media (max-width: 375px) {
+  .card-container {
+    width: 83%;
+  }
+}
+
+.card-container .card {
+  background-color: transparent;
+  border: 0;
+  margin-top: 70px;
+}
+
+.img-artist {
+  height: 10vh;
+  width: 10vh;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #a16a5e;
+  position: absolute;
+  top: -50%;
+  left: 15%;
+}
+
+.card-inner {
+  background-color: #e09686;
+  padding: 5px;
+  position: relative;
+}
+
+.divider {
+  height: 100%;
+  width: 2px;
+  background-color: #a16a5e;
+  margin: 0 10px;
+}
+
+.carousel-control-next-icon {
+  background-image: url(./images/carousel-icons/right-arrow.svg);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(./images/carousel-icons/left-arrow.svg);
+}
+
+/* listing visitor page */
+#cards-container {
+  height: 100vh;
+  width: 100%;
+}
+
+.odd-card {
+  background-color: #fcebd5;
+  color: #a16a5e;
+}
+
+.even-card {
+  background-color: #a16a5e;
+  color: #fcebd5;
+}
+#cards-container {
+  background-color: #edd5bb;
+}
+
+#cards-container .card {
+  margin-top: 0;
+}
+
+#cards-container h5 {
+  font-family: Reenie Beanie;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.price {
+  border: 2px solid #a16a5e;
+  border-radius: 5px;
+  padding: 3px;
+  margin-bottom: 0px;
+}
+
+.price-tag {
+  margin-bottom: 0px;
+}
+
+.price-odd {
+  background-color: #a16a5e;
+  color: #fcebd5;
+}
+
+.price-even {
+  background-color: #fcebd5;
+  color: #a16a5e;
+}
+
+/* Filter Panel */
+.filterIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.panel {
+  position: fixed;
+  top: 0px;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #a16a5e;
+  color: white;
+  transition: right 0.5s ease;
+  z-index: 1000;
+}
+
+.panel .nav-wrapper {
+  padding-right: 10px;
+}
+
+.panel h1 {
+  margin: 10px;
+}
+
+#closePanelBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #a16a5e;
+  color: #fcebd5;
+  border: none;
+  cursor: pointer;
+  margin-top: 55px;
+}
+
+#applyIconBtn {
+  position: absolute;
+  bottom: 50px;
+  right: 25px;
+  padding: 15px;
+  z-index: 1000;
+  text-align: center;
+  cursor: pointer;
+  background-color: #d44c2e;
+  border: none;
+}
+
+.panel.active {
+  right: 0;
+}
+
+.filter-content {
+  color: #fcebd5;
+}
+
+.filter-content p {
+  color: #edd5bb;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+
+.border-bottomLine {
+  border-bottom: 2px solid #fcebd5;
+  margin-left: 20px;
+  width: 87%;
+}
+
+.filter-content .form-control {
+  background-color: transparent;
+  border-color: #edd5bb;
+  width: 30%;
+  padding: 5px;
+  color: #fcebd5;
+  border-radius: 3px;
+}
+
+.filter-content .card {
+  background-color: transparent;
+  border: none;
+}
+
+.filter-content input::placeholder {
+  color: #edd5bb;
+}
+
+.filter-content label {
+  color: #edd5bb;
+}
+
+.filter-content select {
+  background-color: transparent;
+  border-color: #edd5bb;
+  color: #edd5bb;
+  width: 30%;
+  border-radius: 3px;
+}
+
+.filter-content select option {
+  background-color: #a16a5e;
+  color: #fcebd5;
+}
+
+/* Artist home page */
+.artist-nav .navbar-toggler-icon {
+  background-image: url(./images/hamburger-menu/Vector.svg);
+  font-size: 25px;
+  margin: 10px;
+}
+
+.artist-nav .navbar-collapse {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #a16a5e;
+}
+
+.artist-nav .nav-wrapper {
+  height: 80px;
+}
+
+.navbar-collapse .navbar-nav .nav-link {
+  color: #edd5bb;
+  font-size: 40px;
+  padding: 0px;
+}
+
+.navbar-collapse .navbar-nav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.artistHomePageContainer {
+  background-color: #edd5bb;
+  font-family: "Roboto", sans-serif;
+}
+
+.artistHomePageContainer .card-body {
+  background-color: #a16a5e;
+  color: #edd5bb;
+}
+
+@media (max-width: 375px) {
+  .artistHomePageContainer .card-body {
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  .artistHomePageContainer .card-body {
+    padding: 0px;
+  }
+}
+
+.artistHomePageContainer .card-text {
+  font-size: 40px;
+  color: #fcebd5;
+}
+
+.auction-card .card-body {
+  background-color: #d44c2e;
+}
+
+.auction-card .card {
+  background-color: transparent;
+  border: none;
+}
+
+.charts {
+  max-width: 3000px;
+  height: 200%;
+}
+
+.charts p {
+  color: #a16a5e;
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+.charts button {
+  border-radius: 4px;
+  padding: 5px 30px;
+  color: #fcebd5;
+  background-color: #a16a5e;
+  border: none;
+}
+
+@media (max-width: 375px) {
+  .charts button {
+    padding: 5px 20px;
+  }
+}
+
+.charts .active {
+  background-color: #d44c2e;
+}
+
+.charts .active .color {
+  background-color: #a16a5e;
+}
+
+.charts button:hover {
+  background-color: #d44c2e;
+}
+
+.charts .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Artist Items Page */
+#artistItemsPage {
+  background-color: #edd5bb;
+}
+.add-new-item .card {
+  background-color: #fcebd5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-new-item .card-body {
+  border: 2px dashed #a16a5e;
+  color: #a16a5e;
+}
+
+#artistItems-cards .card {
+  background-color: transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-card .card {
+  background-color: black;
+  color: white;
+}
+
+.item-card .card-body {
+  padding: 16px;
+  background-color: #fcebd5;
+  color: #a16a5e;
+  min-height: 200px;
+}
+
+.card-img,
+.card-img-bottom,
+.card-img-top {
+  height: 25vh;
+  object-fit: cover;
+}
+
+.item-card .buttons-inner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #a16a5e;
+  padding: 10px;
+}
+
+.item-card .buttons-inner button {
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  padding: 3px 10px;
+  margin: 0px;
+}
+
+.card-date {
+  color: #e09686;
+}
+
+.item-card .price {
+  background-color: #a16a5e;
+  color: #edd5bb;
+}
+
+.btn-auction {
+  background-color: #1b59ac;
+  color: white;
+}
+
+.btn-published {
+  background-color: #1bac6f;
+  color: white;
+}
+
+.btn-unpublished {
+  background-color: #e5e5e5;
+  color: black;
+}
+
+.btn-remove {
+  background-color: #d44c2e;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #fcebd5;
+  color: #a16a5e;
+}
+
+:disabled {
+  background-color: #5c7ca5;
+}
+
+.modal-content {
+  background-color: #a16a5e;
+  color: #fcebd5;
+}
+/* add new item */
+
+.addPanel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #a16a5e;
+  color: white;
+  transition: right 0.5s ease;
+  z-index: 1000;
+  overflow: scroll;
+}
+
+.addPanel .nav-wrapper {
+  padding-right: 10px;
+}
+
+.addPanel.active {
+  right: 0;
+}
+.addItemContent {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #edd5bb;
+}
+.addItemContent .card {
+  border: none;
+  background-color: transparent;
+}
+
+.addItemContent .card-body {
+  color: #edd5bb;
+  padding-bottom: 0px;
+}
+
+.addItemContent .form-control {
+  background-color: #a16a5e;
+  color: #fcebd5;
+  border: 1px solid #edd5bb;
+}
+
+.addItemContent select {
+  background-color: transparent;
+  color: #edd5bb;
+  border: 1px solid #edd5bb;
+}
+
+.form-select option {
+  background-color: #a16a5e;
+  color: #edd5bb;
+}
+
+.snap-shot .card-body {
+  border: 2px dashed #fcebd5;
+  color: #a16a5e;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.snap-shot .card-text {
+  color: #edd5bb;
+}
+
+.take-snapshot {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#addNewItemBtn {
+  background-color: #d44c2e;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 29px;
+  color: #edd5bb;
+}
+.saveEditBtn {
+  background-color: #d44c2e;
+  padding: 5px 35px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 29px;
+  color: #fcebd5;
+}
+
+#closeBtn {
+  background-color: #e5e5e5;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 29px;
+  color: black;
+}
+
+/* capture image */
+.captureImage-inner {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #a16a5e;
+}
+
+.camera {
+  width: 100%;
+  height: 300px;
+}
+
+.captureBtn {
+  border: none;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+#displayCaptureImage {
+  max-height: 175px;
+  width: auto;
+}
+
+/* Auction page  */
+#auctionItems .card {
+  background-color: #a16a5e;
+  color: #fcebd5;
+}
+
+#auctionItems .card .card-title {
+  font-family: Reenie Beanie;
+  font-size: 30px;
+}
+
+.auction-biding {
+  color: #a16a5e;
+  display: flex;
+}
+
+.auction-biding .form-control {
+  width: 50%;
+}
+
+.btn-bid {
+  border-radius: 3px;
+  cursor: pointer;
+  border: none;
+  padding: 3px 10px;
+  margin: 0px;
+  background-color: #d44c2e;
+  color: white;
+  width: 50%;
+}
+
+.auction-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  color: #a16a5e;
+}
+
+#timer {
+  color: #a16a5e;
+}
